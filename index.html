@@ -26,44 +26,118 @@
   <body>
     <header>
       <!-- ParT Navbar starT -->
-      <section class="nav-bar">
-        <div class="navbar bg-base-100">
-          <div class="flex-1">
-            <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
+      <section class="nav-bar navbar bg-slate-200">
+        <div class="flex-1 gap-4 text-2xl">
+          <img
+            src="media/logo.webp"
+            class="w-16 border-2 rounded-full border-orange-300"
+            alt=""
+          />
+          <span>Image Store</span>
+        </div>
+        <div class="flex-none gap-2">
+          <!-- nav menu strart -->
+          <div
+            class="border-2 border-orange-300 rounded-2xl p-3 mr-10 hidden lg:block"
+          >
+            <ul class="flex justify-center gap-10 text-xl">
+              <li>
+                <span><i class="fa-solid fa-house text-orange-500"></i></span>
+                <span>Home</span>
+              </li>
+              <li>
+                <span><i class="fa-solid fa-heart text-orange-500"></i></span>
+                <span>Wish List</span>
+              </li>
+              <li>
+                <span><i class="fa-solid fa-trash text-orange-500"></i></span>
+                <span>Recycle Bin</span>
+              </li>
+              <li class="relative border-2">
+                <label for="my-drawer" class="drawer-button">
+                  <span
+                    ><i class="fa-solid fa-cart-shopping text-orange-500"></i
+                  ></span>
+                  <span class="absolute top-[-20px] right-[-49px]"
+                    ><div class="badge badge-secondary">++12</div>
+                  </span>
+                </label>
+              </li>
+            </ul>
           </div>
-          <div class="flex-none gap-2">
-            <div class="form-control">
-              <div>search here</div>
-            </div>
-            <div class="dropdown dropdown-end">
-              <label tabindex="0" class="btn btn-ghost btn-circle avatar">
-                <div class="w-10 rounded-full">
-                  <img src="https://placeimg.com/80/80/people" />
-                </div>
-              </label>
-              <ul
-                tabindex="0"
-                class="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52"
-              >
-                <li>
-                  <a class="justify-between">
-                    Profile
-                    <span class="badge">New</span>
-                  </a>
-                </li>
-                <li><a>Settings</a></li>
-                <li><a>Logout</a></li>
-              </ul>
-            </div>
+          <!-- nav menu end -->
+
+          <div class="dropdown dropdown-end block lg:hidden">
+            <label
+              tabindex="0"
+              class="btn btn-ghost btn-circle avatar bg-orange-200"
+            >
+              <i class="fa-solid fa-bars"></i>
+            </label>
+            <ul
+              tabindex="0"
+              class="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52"
+            >
+              <li>
+                <a>
+                  <span><i class="fa-solid fa-house text-orange-500"></i></span>
+                  <span>Home</span>
+                </a>
+              </li>
+              <li>
+                <a>
+                  <span><i class="fa-solid fa-heart text-orange-500"></i></span>
+                  <span>Wish List</span>
+                </a>
+              </li>
+              <li>
+                <a>
+                  <span><i class="fa-solid fa-trash text-orange-500"></i></span>
+                  <span>Recycle Bin</span>
+                </a>
+              </li>
+              <li>
+                <a>
+                  <label for="my-drawer" class="drawer-button">
+                    <span
+                      ><i class="fa-solid fa-cart-shopping text-orange-500"></i
+                    ></span>
+                    <span><div class="badge badge-secondary">++12</div> </span>
+                  </label>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
       <!-- Navbar enD -->
+
+      <!--ParT drawer starT -->
+      <div class="drawer">
+        <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+        <div class="drawer-content">
+          <!-- Page content here -->
+          <!-- <label for="my-drawer" class="btn btn-primary drawer-button"
+            >Open drawer</label
+          > -->
+        </div>
+        <div class="drawer-side">
+          <label for="my-drawer" class="drawer-overlay"></label>
+          <ul
+            class="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content"
+          >
+            <!-- Sidebar content here -->
+            <li><a>Sidebar Item 1</a></li>
+            <li><a>Sidebar Item 2</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- drawer enD -->
       <!--ParT carousal starT -->
       <section class="carousal">
         <div class="flex justify-center">
           <img
-            class="object-contain bg-slate-200 h-80 p-4 border-2 rounded-2xl border-gray-400 w-96"
+            class="object-contain bg-slate-200 h-80 p-4 border-2 rounded-2xl border-orange-300 w-96"
             id="carousal-img"
             src="media/banner-image/banner-img-3.png"
             alt=""
