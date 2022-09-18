@@ -1,10 +1,13 @@
+///-------------------------
+// Image interval setup starT
+///-------------------------
 // Image array for banner
 const bannerImages = [
   "media/banner-image/banner-img-1.png",
   "media/banner-image/banner-img-2.png",
   "media/banner-image/banner-img-3.png",
 ];
-///Image interval setup
+// setInterval for banner
 let imgIndex = 0;
 const img = document.getElementById("carousal-img");
 setInterval(() => {
@@ -13,6 +16,7 @@ setInterval(() => {
   }
   const imageLink = bannerImages[imgIndex];
   img.setAttribute("src", imageLink);
-  console.log(imageLink);
   imgIndex++;
-}, 1000);
+}, 2000);
+
+///Image interval setup enD

@@ -25,10 +25,52 @@
   </head>
   <body>
     <header>
-      <section class="navbar"></section>
-      <section class="carousal">
-        <img id="carousal-img" alt="" />
+      <!-- ParT Navbar starT -->
+      <section class="nav-bar">
+        <div class="navbar bg-base-100">
+          <div class="flex-1">
+            <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
+          </div>
+          <div class="flex-none gap-2">
+            <div class="form-control">
+              <div>search here</div>
+            </div>
+            <div class="dropdown dropdown-end">
+              <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+                <div class="w-10 rounded-full">
+                  <img src="https://placeimg.com/80/80/people" />
+                </div>
+              </label>
+              <ul
+                tabindex="0"
+                class="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52"
+              >
+                <li>
+                  <a class="justify-between">
+                    Profile
+                    <span class="badge">New</span>
+                  </a>
+                </li>
+                <li><a>Settings</a></li>
+                <li><a>Logout</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </section>
+      <!-- Navbar enD -->
+      <!--ParT carousal starT -->
+      <section class="carousal">
+        <div class="flex justify-center">
+          <img
+            class="object-contain bg-slate-200 h-80 p-4 border-2 rounded-2xl border-gray-400 w-96"
+            id="carousal-img"
+            src="media/banner-image/banner-img-3.png"
+            alt=""
+          />
+        </div>
+      </section>
+      <!-- carousal enD -->
     </header>
     <!-- js -->
     <script src="js/slider.js"></script>
