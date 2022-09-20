@@ -38,7 +38,7 @@
           <span>Image Store</span>
         </div>
         <div class="flex-none gap-2">
-          <!-- nav menu strart -->
+          <!-- nav menu starT -->
           <div
             class="border-2 border-orange-300 rounded-2xl p-3 mr-10 hidden lg:block"
           >
@@ -67,7 +67,7 @@
               </li>
             </ul>
           </div>
-          <!-- nav menu end -->
+          <!-- nav menu enD -->
 
           <section class="dropdown dropdown-end block lg:hidden">
             <label
@@ -131,12 +131,12 @@
             </div>
           </section>
           <!-- carousal enD
-          <!-- workinG -->
-          <!-- cards starT -->
+            <!-- cards starT -->
           <div
             class="max-w-[1000px] mx-6 lg:mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6 my-12"
           >
             <!-- c--1 -->
+
             <div
               class="card w-full bg-base-100 shadow-2xl border border-orange-200"
             >
@@ -166,11 +166,12 @@
                 </div>
                 <p>If a dog chews shoes whose shoes does he choose?</p>
                 <div class="flex flex-col items-center sm:flex-row gap-2">
-                  <button
+                  <label
+                    for="my-modal-3"
                     class="btn hover:bg-orange-500 btn-outline w-full sm:w-1/2"
                   >
-                    <i class="fa-solid fa-circle-info mr-2"></i> Buy Now
-                  </button>
+                    <i class="fa-solid fa-circle-info mr-2"></i> Details</label
+                  >
                   <button
                     class="btn bg-orange-500 hover:bg-orange-600 w-full sm:w-1/2"
                   >
@@ -209,11 +210,12 @@
                 </div>
                 <p>If a dog chews shoes whose shoes does he choose?</p>
                 <div class="flex flex-col items-center sm:flex-row gap-2">
-                  <button
+                  <label
+                    for="my-modal-3"
                     class="btn hover:bg-orange-500 btn-outline w-full sm:w-1/2"
                   >
-                    <i class="fa-solid fa-circle-info mr-2"></i> Buy Now
-                  </button>
+                    <i class="fa-solid fa-circle-info mr-2"></i> Details</label
+                  >
                   <button
                     class="btn bg-orange-500 hover:bg-orange-600 w-full sm:w-1/2"
                   >
@@ -252,11 +254,12 @@
                 </div>
                 <p>If a dog chews shoes whose shoes does he choose?</p>
                 <div class="flex flex-col items-center sm:flex-row gap-2">
-                  <button
+                  <label
+                    for="my-modal-3"
                     class="btn hover:bg-orange-500 btn-outline w-full sm:w-1/2"
                   >
-                    <i class="fa-solid fa-circle-info mr-2"></i> Buy Now
-                  </button>
+                    <i class="fa-solid fa-circle-info mr-2"></i> Details</label
+                  >
                   <button
                     class="btn bg-orange-500 hover:bg-orange-600 w-full sm:w-1/2"
                   >
@@ -295,11 +298,12 @@
                 </div>
                 <p>If a dog chews shoes whose shoes does he choose?</p>
                 <div class="flex flex-col items-center sm:flex-row gap-2">
-                  <button
+                  <label
+                    for="my-modal-3"
                     class="btn hover:bg-orange-500 btn-outline w-full sm:w-1/2"
                   >
-                    <i class="fa-solid fa-circle-info mr-2"></i> Buy Now
-                  </button>
+                    <i class="fa-solid fa-circle-info mr-2"></i> Details</label
+                  >
                   <button
                     class="btn bg-orange-500 hover:bg-orange-600 w-full sm:w-1/2"
                   >
@@ -338,11 +342,12 @@
                 </div>
                 <p>If a dog chews shoes whose shoes does he choose?</p>
                 <div class="flex flex-col items-center sm:flex-row gap-2">
-                  <button
+                  <label
+                    for="my-modal-3"
                     class="btn hover:bg-orange-500 btn-outline w-full sm:w-1/2"
                   >
-                    <i class="fa-solid fa-circle-info mr-2"></i> Buy Now
-                  </button>
+                    <i class="fa-solid fa-circle-info mr-2"></i> Details</label
+                  >
                   <button
                     class="btn bg-orange-500 hover:bg-orange-600 w-full sm:w-1/2"
                   >
@@ -381,11 +386,12 @@
                 </div>
                 <p>If a dog chews shoes whose shoes does he choose?</p>
                 <div class="flex flex-col items-center sm:flex-row gap-2">
-                  <button
+                  <label
+                    for="my-modal-3"
                     class="btn hover:bg-orange-500 btn-outline w-full sm:w-1/2"
                   >
-                    <i class="fa-solid fa-circle-info mr-2"></i> Buy Now
-                  </button>
+                    <i class="fa-solid fa-circle-info mr-2"></i> Details</label
+                  >
                   <button
                     class="btn bg-orange-500 hover:bg-orange-600 w-full sm:w-1/2"
                   >
@@ -402,6 +408,7 @@
           <ul
             class="menu p-4 overflow-y-auto w-64 bg-base-100 text-base-content"
           >
+            <!-- workinG -->
             <!-- Sidebar content here -->
             <li><a>Sidebar Item 1</a></li>
             <li><a>Sidebar Item 2</a></li>
@@ -409,21 +416,47 @@
         </div>
       </div>
       <!-- drawer enD -->
-      <!-- ParT carousal starT -->
-      <!-- <section class="carousal">
-        <div class="flex justify-center">
-          <img
-            class="object-contain bg-slate-200 h-80 p-4 border-2 rounded-2xl border-orange-300 w-96"
-            id="carousal-img"
-            src="media/banner-image/banner-img-3.png"
-            alt=""
-          />
-        </div>
-      </section> -->
-      <!-- carousal enD -->
     </header>
-    <!-- js -->
-    <main></main>
+    <main>
+      <!--ParT Modal starT -->
+      <input type="checkbox" id="my-modal-3" class="modal-toggle" />
+      <div class="modal">
+        <div class="modal-box relative">
+          <label
+            for="my-modal-3"
+            class="btn btn-sm btn-circle absolute right-2 top-2"
+            >✕</label
+          >
+          <div>
+            <img
+              class="rounded-lg"
+              src="https://placeimg.com/400/225/arch"
+              alt="Shoes"
+            />
+            <h1 class="text-xl mt-5">
+              <span class="text-violet-500 uppercase font-bold">Product: </span>
+
+              Product name
+            </h1>
+            <p class="text-lg text-gray-500 mt-1">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Perspiciatis, maiores?
+            </p>
+            <h1 class="text-xl mt-5">
+              <span class="text-violet-500 uppercase font-bold">Feature: </span>
+            </h1>
+            <p class="text-lg text-gray-500 mt-1">
+              Feature1,Feature1,Feature1,Feature1,Feature1.
+            </p>
+            <h1 class="text-xl mt-5">
+              <span class="text-violet-500 uppercase font-bold">Price: </span
+              >$2000
+            </h1>
+          </div>
+        </div>
+      </div>
+      <!-- Modal enD -->
+    </main>
     <footer>
       <footer class="footer p-10 bg-base-200 text-base-content">
         <div>
@@ -464,6 +497,7 @@
         </div>
       </footer>
     </footer>
+    <!-- js -->
     <script src="js/slider.js"></script>
   </body>
 </html>
