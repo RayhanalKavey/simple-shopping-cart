@@ -1,10 +1,21 @@
-fetch("../data.json")
-  .then((res) => res.json())
-  .then((data) => displayData(data));
+// let dataSet;
+// //Load data
+// fetch("../data.json")
+//   .then((res) => res.json())
+//   .then((data) => {
+//     dataSet = data;
+//     displayData(data);
+//   });
+const phoneData = async () => {
+  const res = await fetch("../data.json");
+  const data = await res.json();
+  dataSet = data;
+  displayData(data);
+};
+phoneData();
 //ParT : display data
-// workinG
 const displayData = (items) => {
-  console.log(items[0]);
+  // console.log(items[0]);
   const cardContainer = document.getElementById("homepage-card-container");
   items.map((item) => {
     const { id, price, img, name } = item;
@@ -47,7 +58,7 @@ const displayData = (items) => {
                 <p><span>Price: </span>$${price}</p>
                 <div class="flex flex-col items-center sm:flex-row gap-2">
                   <label
-                    onclick="handleModal()"
+                    onclick="handleModal(${id})"
                     for="my-modal-3"
                     class="btn hover:bg-orange-500 btn-outline w-full sm:w-1/2"
                   >
@@ -64,9 +75,35 @@ const displayData = (items) => {
     
     `;
     cardContainer.appendChild(cardDiv);
-    // console.log(id, price, img, name);
   });
 };
-const handleModal = () => {
-  console.log("clicked");
+///Modal Click
+const handleModal = (id) => {
+  const modalContainer = document.getElementById("modal-info");
+  // console.log(typeof dataSet[0].id, typeof id);
+  const product = dataSet.find((item) => +item.id === id);
+  const { name, img, price } = product;
+  // console.log(product);
+
+  modalContainer.innerHTML = `
+  <img class="rounded-lg" src="${img}" />
+            <h1 class="text-xl mt-5">
+              <span class="text-orange-700 uppercase font-bold">Product: </span>
+                  ${name}
+            </h1>
+            <p class="text-lg text-gray-500 mt-1">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Perspiciatis, maiores?
+            </p>
+            <h1 class="text-xl mt-5">
+              <span class="text-orange-700 uppercase font-bold">Feature: </span>
+            </h1>
+            <p class="text-lg text-gray-500 mt-1">
+              Feature1,Feature1,Feature1,Feature1,Feature1.
+            </p>
+            <h1 class="text-xl mt-5">
+              <span class="text-orange-700 uppercase font-bold">Price: </span
+              >$${price}
+            </h1>
+  `;
 };
